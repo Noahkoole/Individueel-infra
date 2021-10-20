@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gateways-deployment
+  name: gateways
 spec:
   selector:
     matchLabels:
@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: gateways-service
+  name: gateways
 spec:
   type: LoadBalancer
   selector:

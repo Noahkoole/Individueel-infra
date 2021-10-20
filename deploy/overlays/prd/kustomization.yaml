@@ -7,3 +7,12 @@ resources:
 - namespace.yaml
 transformers:
 - labels.yaml
+patchesStrategicMerge:
+- |
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: gateways
+replicas:
+- count: 2
+  name: gateways
