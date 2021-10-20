@@ -7,6 +7,3 @@ resources:
 - namespace.yaml
 transformers:
 - labels.yaml
-replicas:
-- count: 2
-  name: gymshare
