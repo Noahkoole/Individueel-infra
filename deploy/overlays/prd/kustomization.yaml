@@ -15,4 +15,4 @@ patchesStrategicMerge:
     name: gymshare
 replicas:
 - count: 2
-  name: realtime
+  name: gymshare
