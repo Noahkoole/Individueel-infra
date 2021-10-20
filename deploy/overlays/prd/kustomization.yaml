@@ -7,12 +7,6 @@ resources:
 - namespace.yaml
 transformers:
 - labels.yaml
-patchesStrategicMerge:
-- |
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-    name: gymshare
 replicas:
 - count: 2
   name: gymshare
