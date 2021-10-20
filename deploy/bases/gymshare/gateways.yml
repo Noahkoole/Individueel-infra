@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateways-deployment
+spec:
+  selector:
+    matchLabels:
+      app: gateways
+  template:
+    metadata:
+      labels:
+        app: gateways
+    spec:
+      containers:
+      - name: gateways-container
+        image: noahkoole/gateways
+        env:
+          - name: Audience
+            value: "gymshare-1e65f"
+          - name: Issuer
+            value: "https://securetoken.google.com/gymshare-1e65f"
+          - name: ENVIRONMENT
+            value: prod
+        imagePullPolicy: Always
+        # resources:
+        #   limits:
+        #     memory: "512Mi"
+        #     cpu: "500m"
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateways-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: gateways
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 31000
