@@ -40,7 +40,7 @@ spec:
   selector:
     app: gateways
   externalIPs:
-  - localhost
+  - 192.168.0.1
   ports:
   - port: 8080
     targetPort: 80
