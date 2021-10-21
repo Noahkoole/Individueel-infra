@@ -19,7 +19,5 @@ replicas:
 images:
 - name: noahkoole/gymshare-authentication
   newTag: 1.0.0
-- name: noahkoole/gymshare-authorization
-  newTag: 1.0.0
 - name: noahkoole/gymshare-gateways
   newTag: 1.0.0
