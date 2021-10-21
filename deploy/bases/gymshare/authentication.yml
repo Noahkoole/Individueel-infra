@@ -36,10 +36,11 @@ kind: Service
 metadata:
   name: authentication
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: authenticationAPI
   ports:
   - protocol: TCP
     port: 80
     targetPort: 80
+    nodeport: 30008
