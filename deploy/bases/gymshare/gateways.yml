@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: gateways-container
-        image: noahkoole/gateways
+        image: noahkoole/gymshare-gateways
         env:
           - name: Audience
             value: "gymshare-1e65f"
@@ -43,3 +43,4 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
+    

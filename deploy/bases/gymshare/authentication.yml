@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: authentication-deployment
+  name: authentication
 spec:
   selector:
     matchLabels:
@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: authentication-api-container
-        image: noahkoole/backendauthenticationserver
+        image: noahkoole/gymshare-authentication
         env:
           - name: Audience
             value: "gymshare-1e65f"
@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: authentication-service
+  name: authentication
 spec:
   type: LoadBalancer
   selector:
