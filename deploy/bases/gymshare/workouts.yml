@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workouts
+spec:
+  selector:
+    matchLabels:
+      app: workouts
+  template:
+    metadata:
+      labels:
+        app: workouts
+    spec:
+      containers:
+      - name: workouts-container
+        image: noahkoole/gymshare-workouts
+        env:
+          - name: Audience
+            value: "gymshare-1e65f"
+          - name: Issuer
+            value: "https://securetoken.google.com/gymshare-1e65f"
+          - name: ENVIRONMENT
+            value: prod
+        imagePullPolicy: Always
+        # resources:
+        #   limits:
+        #     memory: "512Mi"
+        #     cpu: "500m"
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: workouts
+spec:
+  type: LoadBalancer
+  selector:
+    app: workouts
+  ports:
+  - port: 8080
+    targetPort: 80
