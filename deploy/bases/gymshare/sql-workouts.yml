@@ -14,7 +14,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: mysql:lastest
+      - image: mysql:latest
         name: mysql
         env:
           # Use secret in real usage
