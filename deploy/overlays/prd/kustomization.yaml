@@ -18,6 +18,6 @@ replicas:
   name: gateways
 images:
 - name: noahkoole/gymshare-authentication
-  newTag: sha-ce51f25
+  newTag: master
 - name: noahkoole/gymshare-gateways
-  newTag: sha-ce51f25
+  newTag: master
