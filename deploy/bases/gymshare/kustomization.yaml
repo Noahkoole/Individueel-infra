@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
 - gateways.yml
 - authentication.yml
+- workouts.yml
+- users.yml
