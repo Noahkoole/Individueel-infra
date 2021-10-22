@@ -24,7 +24,7 @@ spec:
           - name: ConnectionServer
             value: mysql-dev
           - name: ConnectionString
-            value: user=user;port=3306;password=root
+            value: user=root;port=3306;password=root
         imagePullPolicy: Always
         # resources:
         #   limits:
