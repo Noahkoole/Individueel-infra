@@ -9,10 +9,26 @@ transformers:
 - labels.yaml
 patchesStrategicMerge:
 - |
+patchesStrategicMerge:
+- |
   apiVersion: apps/v1
   kind: Deployment
   metadata:
     name: gateways
+  spec:
+    template:
+      spec:
+        $setElementOrder/containers:
+        - name: gateways-container
+        containers:
+        - $setElementOrder/env:
+          - name: Audience
+          - name: Issuer
+          - name: ENVIRONMENT
+          env:
+          - name: ENVIRONMENT
+            value: prod
+          name: gateways-container
 replicas:
 - count: 2
   name: gateways
