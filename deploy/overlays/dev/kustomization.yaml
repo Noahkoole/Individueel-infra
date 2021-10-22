@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: gymshare-dev
+nameSuffix: -dev
+resources:
+- ../../bases/gymshare
+- namespace.yaml
+transformers:
+- labels.yaml
+replicas:
+- count: 1
+  name: gateways
+images:
+- name: noahkoole/gymshare-authentication
+  newTag: sha-11e921f
+- name: noahkoole/gymshare-gateways
+  newTag: sha-11e921f
