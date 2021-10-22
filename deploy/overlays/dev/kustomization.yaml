@@ -32,6 +32,6 @@ replicas:
   name: gateways
 images:
 - name: noahkoole/gymshare-authentication
-  newTag: sha-e93daf2
+  newTag: sha-08e3e3c
 - name: noahkoole/gymshare-gateways
-  newTag: sha-e93daf2
+  newTag: sha-08e3e3c
