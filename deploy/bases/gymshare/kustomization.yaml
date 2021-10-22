@@ -5,3 +5,4 @@ resources:
 - authentication.yml
 - workouts.yml
 - users.yml
+- sql-workouts.yml
