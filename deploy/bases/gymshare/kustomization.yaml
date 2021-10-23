@@ -6,3 +6,4 @@ resources:
 - workouts.yml
 - users.yml
 - sql-workouts.yml
+- sql-users.yml

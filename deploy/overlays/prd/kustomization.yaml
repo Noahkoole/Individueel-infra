@@ -9,8 +9,6 @@ transformers:
 - labels.yaml
 patchesStrategicMerge:
 - |
-patchesStrategicMerge:
-- |
   apiVersion: apps/v1
   kind: Deployment
   metadata:
