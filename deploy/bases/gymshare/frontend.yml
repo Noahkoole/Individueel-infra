@@ -16,7 +16,7 @@ spec:
         image: noahkoole/gymshare-frontend
         env:
           - name: REACT_APP_API_URL
-            value: "gateways-dev:8080"
+            value: gateways-dev:8080
         imagePullPolicy: Always
         # resources:
         #   limits:
