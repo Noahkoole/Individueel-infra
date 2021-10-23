@@ -32,10 +32,12 @@ replicas:
   name: gateways
 images:
 - name: noahkoole/gymshare-authentication
-  newTag: sha-33a42d2
+  newTag: sha-1325840
+- name: noahkoole/gymshare-frontend
+  newTag: sha-1325840
 - name: noahkoole/gymshare-gateways
-  newTag: sha-33a42d2
+  newTag: sha-1325840
 - name: noahkoole/gymshare-users
-  newTag: sha-33a42d2
+  newTag: sha-1325840
 - name: noahkoole/gymshare-workouts
-  newTag: sha-33a42d2
+  newTag: sha-1325840
