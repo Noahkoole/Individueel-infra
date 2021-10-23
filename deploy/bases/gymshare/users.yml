@@ -21,6 +21,10 @@ spec:
             value: "https://securetoken.google.com/gymshare-1e65f"
           - name: ENVIRONMENT
             value: prod
+          - name: ConnectionServer
+            value: mysql-users-dev
+          - name: ConnectionString
+            value: user=root;port=3306;password=root
         imagePullPolicy: Always
         # resources:
         #   limits:
