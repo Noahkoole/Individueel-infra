@@ -36,10 +36,9 @@ kind: Service
 metadata:
   name: gateways
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: gateways
   ports:
   - port: 8080
     targetPort: 80
-    nodePort: 30007
