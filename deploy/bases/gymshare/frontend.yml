@@ -14,9 +14,6 @@ spec:
       containers:
       - name: react-frontend
         image: noahkoole/gymshare-frontend
-        env:
-          - name: REACT_APP_API_URL
-            value: http://gateways-dev:8080
         imagePullPolicy: Always
         # resources:
         #   limits:
